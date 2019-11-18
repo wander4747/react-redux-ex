@@ -2,16 +2,16 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { combineReducers, createStore } from 'redux';
 import { Provider } from 'react-redux';
-import CounterReducer from './counter/CounterReducer'
-import Counter from './counter/Counter';
+import Field from  './field/Field'
+import FieldReducer from './field/FieldReducer'
 
 const reducers = combineReducers({
-    counter: CounterReducer
+    field: FieldReducer
 });
 
 ReactDOM.render(
     <Provider store={createStore(reducers)}>
-        <Counter initialValue="Teste" />
+        <Field initialValue="Teste" />
     </Provider>  ,
   document.getElementById('root')
 );
